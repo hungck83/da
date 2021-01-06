@@ -42,7 +42,7 @@ fi
 
 ADMIN_USER=admin
 DB_USER=da_admin
-ADMIN_PASS=`perl -le'print map+(A..Z,a..z,0..9)[rand 62],0..9'`;
+ADMIN_PASS=`perl -le'print map+(A..Z,a..z,0..9)[rand 62],0..15'`;
 RAND_LEN=`perl -le'print 16+int(rand(9))'`
 DB_ROOT_PASS=`perl -le"print map+(A..Z,a..z,0..9)[rand 62],0..$RAND_LEN"`;
 
