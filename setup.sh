@@ -1826,6 +1826,7 @@ echo "NETMASK=255.255.255.0" >> /etc/sysconfig/network-scripts/ifcfg-${INET}100
 echo "ONBOOT=no" >> /etc/sysconfig/network-scripts/ifcfg-${INET}100
 /usr/bin/perl -pi -e 's/^ethernet_dev=.*/#ethernet_dev=/' /usr/local/directadmin/conf/directadmin.conf
 echo "ethernet_dev=${INET}100" >> /usr/local/directadmin/conf/directadmin.conf
+echo "disable_ip_check=1" >> /usr/local/directadmin/conf/directadmin.conf
 
 /usr/bin/systemctl restart network
 /usr/bin/systemctl restart directadmin
